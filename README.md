@@ -1,3 +1,3 @@
 # Objetivo
 
-Projeto para desenvolvimento de um site utilizando o framework web Django.
+Projeto para desenvolvimento de um site utilizando Django, um web framework de Python.
