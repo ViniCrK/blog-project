@@ -11,11 +11,11 @@ articles = [
 
 
 def list_articles(request):
-    context = {
-        'articles': articles,
-    }
-    return render(request, 'index.html', context)
+    return render(request, 'index.html')
 
 
 def detail_article(request):
-    return render(request, 'detail.html')
+    context = {
+        'articles': articles,
+    }
+    return render(request, 'detail_article.html', context)
