@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 articles = [
     {
-        'title': ...,
+        'id': 1,
+        'title': "Verstappen's on pole for F1 season-opening Bahrain Grand Prix, as drama over his boss intensifies",
         'subtitle': ...,
         'content': ...,
     }
@@ -14,3 +15,7 @@ def list_articles(request):
         'articles': articles,
     }
     return render(request, 'index.html', context)
+
+
+def detail_article(request):
+    return render(request, 'detail.html')
