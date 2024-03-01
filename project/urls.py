@@ -4,6 +4,6 @@ from django.conf.urls.static import static
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('home.urls')),
+    path('', include('article.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
