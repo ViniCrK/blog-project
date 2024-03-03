@@ -3,5 +3,11 @@
 {% block title %} {% endblock %}
 
 {% block content %}
-
+{% for article in articles %}
+<a href="{% url 'detail_article' article.id %}">{{article.title}}</a>
+<br>
+{{article.subtitle}}
+<br>
+{{article.content}}
+{% endfor %}
 {% endblock %}
