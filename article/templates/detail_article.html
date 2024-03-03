@@ -5,7 +5,22 @@
 {% endblock %}
 
 {% block content %}
-{{article.title}}
-{{article.subtitle}}
-{{article.content}}
+<main class="container">
+    <div class="row g-5">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                {{ article.subtitle }}
+            </h3>
+
+            <article class="blog-post">
+                <h2 class="pt-2 pb-4 display-5 link-body-emphasis mb-1">{{ article.title }}</h2>
+
+                <p>{{ article.content }}</p>
+                <hr>
+                <p></p>
+                <hr>
+                <p></p>
+        </div>
+    </div>
+</main>
 {% endblock %}
