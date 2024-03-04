@@ -5,7 +5,7 @@ articles = [
         'id': 1,
         'title': "Max Verstappen wins Bahrain Grand Prix amid Red Bull turmoil",
         'subtitle': "It was a commanding one-two win for Red Bull with teammate Sergio Perez",
-        'content': "SAKHIR, Bahrain — The ongoing drama around Red Bull had no effect on its three-time reigning world champion as Max Verstappen routed the field by 22 seconds in the season-opening Formula 1 race on Saturday.\n Verstappen started the Bahrain Grand Prix on pole position and was never seriously challenged on his way to a commanding one-two win for Red Bull with teammate Sergio Perez. Embattled team principal Christian Horner was joined before the race and during the podium celebration by his former pop star wife, Geri Halliwell.",
+        'content': "SAKHIR, Bahrain — The ongoing drama around Red Bull had no effect on its three-time reigning world champion as Max Verstappen routed the field by 22 seconds in the season-opening Formula 1 race on Saturday. Verstappen started the Bahrain Grand Prix on pole position and was never seriously challenged on his way to a commanding one-two win for Red Bull with teammate Sergio Perez. Embattled team principal Christian Horner was joined before the race and during the podium celebration by his former pop star wife, Geri Halliwell.",
     },
     {
         'id': 2,
