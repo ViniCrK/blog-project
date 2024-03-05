@@ -17,10 +17,9 @@ articles = [
 
 
 def list_articles(request):
-    context = {
-        'articles': articles,
-    }
-    return render(request, 'index.html', context)
+    context = articles
+
+    return render(request, 'index.html', {'context': context})
 
 
 def detail_article(request, id):
