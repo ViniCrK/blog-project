@@ -1,3 +1,4 @@
-# Objetivo
+# Desenvolvimento de sites com Django
 
-Projeto para desenvolvimento de um site utilizando Django, um web framework de Python.
+## Objetivo
+    Projeto para desenvolvimento de um site utilizando Django e Bootstrap.
