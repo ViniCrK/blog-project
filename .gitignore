@@ -8,7 +8,8 @@ env/
 *.pyc
 __pycache__
 db.sqlite3
-media
+media/
+static/
 
 # Backup files # 
 *.bak 
