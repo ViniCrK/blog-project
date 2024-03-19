@@ -1,17 +1,9 @@
 from django.contrib import admin
-from article import models
+from .models.tag import Tag
+from .models.category import Category
+from .models.article import Article
 
 
-@admin.register(models.Category)
-class CateogryAdmin(admin.ModelAdmin):
-    list_display = 'name',
-    ordering = '-id',
-
-
-@admin.register(models.Article)
-class ArticleAdmin(admin.ModelAdmin):
-    list_display = 'id', 'title',
-    ordering = '-id',
-    search_fields = 'title', 'subtitle',
-    list_per_page = 10
-    list_display_links = 'id', 'title',
+admin.site.register(Tag)
+admin.site.register(Category)
+admin.site.register(Article)
