@@ -8,6 +8,7 @@ class Article(models.Model):
     subtitle = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/%Y/%m/', null=True)
     content = models.TextField(blank=True)
+    author = models.CharField(max_length=100, null=True)
     category = models.ForeignKey(
         Category, models.SET_NULL, blank=True, null=True)
     tags = models.ManyToManyField(Tag)
