@@ -7,11 +7,13 @@ def list_articles(request):
         'articles': Article.objects.all()
     }
 
-    return render(request, 'index.html', context)
+    return render(request, 'article/index.html', context)
 
 
 def detail_article(request, id):
+    article = Article.objects.prefetch_related('tags').get(pk=id)
+
     context = {
-        'article': Article.objects.get(pk=id),
+        'article': article,
     }
-    return render(request, 'detail_article.html', context)
+    return render(request, 'article/detail_article.html', context)
