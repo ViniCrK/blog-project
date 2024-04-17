@@ -1,3 +1,13 @@
 .navbar {
     background-color: lightblue;
 }
+
+.blog-post-meta {
+    color: #dee2e6;
+    background-color: #393e46;
+
+    width: fit-content;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-sizing: border-box;
+}
