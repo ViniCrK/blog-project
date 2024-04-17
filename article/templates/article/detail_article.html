@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+{% block content %}
+<main class="container">
+    <div class="row g-5">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                {{ article.subtitle }}
+            </h3>
+
+            <article class="blog-post">
+                {% for tag in article.tags.all %}
+                    <p>{{ tags.name }}</p>
+                {% endfor %}
+                <h2 class="pt-2 pb-4 display-5 link-body-emphasis mb-1">{{ article.title }}</h2>
+
+                <img src="{{ article.image.url }}" width="800" height="675" alt="">
+
+                <p>{{ article.content }}</p>
+                <hr>
+        </div>
+    </div>
+</main>
+{% endblock %}

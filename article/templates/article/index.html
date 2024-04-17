@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %} {% endblock %}
+
+{% block content %}
+<main class="container">
+    <div class="row mb-2">
+        {% for article in articles %}
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success-emphasis">{{article.category}}</strong>
+                    <h3 class="mb-0">{{article.title}}</h3>
+                    <p class="card-text mb-auto">{{article.subtitle}}</p>
+                    <a href="{% url 'detail_article' article.id %}"
+                        class="icon-link gap-1 icon-link-hover stretched-link">
+                        Continue reading
+                        <svg class="bi">
+                            <use xlink:href="#chevron-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="col-md-4">
+        <div class="position-sticky" style="top: 2rem;">
+            <div class="p-4 mb-3 bg-body-tertiary rounded">
+                <h4 class="fst-italic">About</h4>
+                <p class="mb-0">Welcome to <strong>AutoBlog</strong>, your ultimate destination for all things
+                    automotive!
+                    Whether you're a seasoned gearhead or just have a passion for cars, we're here to fuel your
+                    fascination with the world of automobiles.</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
