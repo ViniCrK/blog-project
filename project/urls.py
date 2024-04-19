@@ -4,8 +4,9 @@ from django.conf.urls.static import static
 from django.urls import path, include
 
 urlpatterns = [
-    path('articles/', include('article.urls')),
     path('admin/', admin.site.urls),
+    path('', include('users.urls')),
+    path('articles/', include('article.urls')),
 ]
 
 if settings.DEBUG:
