@@ -5,7 +5,6 @@
 Home
 {% endblock %}
 
-<!-- Faça uma home page que contenha a imagem do site no meio do block content e uma mensagem abaixo dizendo: "Welcome to AutoBlog! Sign in ou Register your account" -->
 {% block content %}
   <div class="centered-div">
     {% if not user.is_authenticated %}
@@ -13,8 +12,9 @@ Home
       <h1>Welcome to AutoBlog!</h1>
       <p><strong><a href="{% url 'login' %}">Sign in</a></strong> or <strong><a href="{% url 'register' %}">Register</a></strong> your account</p>
     {% else %}
-      <h1>Hello, {{user.email}}!</h1>
-      <p>You should see our <strong>Articles</strong></p>
+      <h1>Hello, {{user.username}}!</h1>
+      <p>Maybe you wanna see our <a href="{% url 'list_articles' %}">Articles</a></p>
+      <p>Bad time for reading? You could <a href="{% url 'logout' %}">logout</a></p>
     {% endif %}
   </div>
 {% endblock %}
