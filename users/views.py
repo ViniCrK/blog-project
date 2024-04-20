@@ -8,13 +8,15 @@ def home(request):
     return render(request, 'users/home.html')
 
 
-def register(request):
+def register_user(request):
     if request.method == 'POST':
-        email = request.POST["email"]
-        password = request.POST["password"]
+        email = request.POST.get('email')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
         user = get_user_model()
 
         user_created = user.objects.create(
+            username=username,
             email=email,
         )
         user_created.set_password(password)
@@ -23,21 +25,21 @@ def register(request):
     return render(request, 'users/register.html')
 
 
-def login(request):
+def login_user(request):
     if request.method == 'POST':
-        email = request.POST["email"]
-        password = request.POST["password"]
-        user = authenticate(username=email, password=password)
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
 
-        if user is not None:
+        if user:
             login(request, user)
             messages.success(request, 'Login realizado com sucesso!')
-            return redirect('list_articles')
+            return redirect(reverse('home'))
         else:
             messages.warning(request, 'Usuário ou senha inválidos!')
     return render(request, 'users/login.html')
 
 
-def logout(request):
+def logout_user(request):
     logout(request)
-    return render(request, 'users/logout.html')
+    return redirect('login')
