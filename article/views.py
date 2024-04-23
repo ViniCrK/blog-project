@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from .models import Article
 
 
+@login_required
 def list_articles(request):
     articles = Article.objects.all()
 
