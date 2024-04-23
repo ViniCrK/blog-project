@@ -3,8 +3,10 @@ from .models import Article
 
 
 def list_articles(request):
+    articles = Article.objects.all()
+
     context = {
-        'articles': Article.objects.all()
+        'articles': articles,
     }
 
     return render(request, 'article/index.html', context)
