@@ -9,10 +9,14 @@ Home
   <div class="centered-div">
     {% if not user.is_authenticated %}
       <img src="{% static 'velocimetro_branco.png' %}" alt="AutoBlog Logo">
+
       <h1>Welcome to AutoBlog!</h1>
-      <p><strong><a href="{% url 'login' %}">Sign in</a></strong> or <strong><a href="{% url 'register' %}">Register</a></strong> your account</p>
+      <p>
+        <a href="{% url 'login' %}">Sign in</a> or <a href="{% url 'register' %}">Register</a> your account
+      </p>
     {% else %}
       <h1>Hello, {{user.username}}!</h1>
+      
       <p>Maybe you wanna see our <a href="{% url 'list_articles' %}">Articles</a></p>
       <p>Bad time for reading? You could <a href="{% url 'logout' %}">logout</a></p>
     {% endif %}
