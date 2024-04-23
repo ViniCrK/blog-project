@@ -10,7 +10,7 @@ class Article(models.Model):
     content = models.TextField(blank=True)
     author = models.CharField(max_length=100, null=True)
     category = models.ForeignKey(
-        Category, models.SET_NULL, blank=True, null=True)
+        Category, on_delete=models.SET_NULL, blank=True, null=True)
     tags = models.ManyToManyField(Tag)
 
     def __str__(self) -> str:
