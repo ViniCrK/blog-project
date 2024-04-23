@@ -2,6 +2,10 @@
     background-color: lightblue;
 }
 
+a {
+  font-weight: bold;
+}
+
 .centered-div {
     display: flex;
     flex-direction: column;
@@ -13,7 +17,7 @@
     
     margin: auto;
     width: 360px;
-    height: 360px;
+    height: 380px;
     padding: 10px;
 
     border-radius: 10px;
